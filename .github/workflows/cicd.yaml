@@ -20,13 +20,13 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        runs: |
+        run: |
           python -m pip install --upgrade pip
           pip install pytest-cov -r requirements.txt
 
       # Run test cases with coverage
       - name: run test with coverage
-        runs: |
+        run: |
           pytest --cov=src tests/ --cov-report=xml --cov-report=html
   docker:
     runs-on: ubuntu-latest
